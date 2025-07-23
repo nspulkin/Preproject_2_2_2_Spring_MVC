@@ -5,7 +5,8 @@ public class Car {
     private int serial;
     private String number;
 
-    public Car() {}
+    public Car() {
+    }
 
     public Car(String model, int serial, String number) {
         this.model = model;

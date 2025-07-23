@@ -13,7 +13,7 @@ public class CarController {
     private CarService carService;
 
     @GetMapping("/cars")
-    public String carPageWithParam(ModelMap model, @RequestParam(value = "count",defaultValue = "5") int count) {
+    public String carPageWithParam(ModelMap model, @RequestParam(value = "count", defaultValue = "5") int count) {
         model.addAttribute("cars", carService.getCarList(count));
         return "cars";
     }

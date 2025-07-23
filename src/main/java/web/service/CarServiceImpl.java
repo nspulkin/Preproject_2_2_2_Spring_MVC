@@ -9,8 +9,11 @@ import java.util.stream.IntStream;
 
 @Service
 public class CarServiceImpl implements CarService {
-    static List<Car> carList = new ArrayList<>();
-    static {
+
+    private final List<Car> carList;
+
+    public CarServiceImpl() {
+        this.carList = new ArrayList<>();
         carList.add(new Car("model1", 1111111, "AAA111"));
         carList.add(new Car("model2", 2222222, "BBB222"));
         carList.add(new Car("model3", 3333333, "CCC333"));
@@ -26,3 +29,4 @@ public class CarServiceImpl implements CarService {
                 .toList();
     }
 }
+
